@@ -1,0 +1,65 @@
+<div class="card">
+	<div class="card-header">Data Penyewaan</div>
+	<div class="card-body">
+
+		<form id="myForm" onsubmit="handleFormSubmit(this)">
+			<div id="message"></div>
+			<input type="text" id="RecId" name="RecId" value="ID" style="display: none">
+
+			<!-- Input type text -->
+			<div class="form-group">
+				<label for="nama">Nama</label>
+				<input type="text" class="form-control" name="nama" id="nama" required>
+			</div>
+
+			<!-- Input text grid -->
+			<div class="form-group">
+				<div class="row">
+					<div class="col">
+						<label>Alamat</label>
+						<input type="alamat" name="alamat" id="alamat" class="form-control" required>
+					</div>
+					<div class="col">
+						<label>WhatsApp</label>
+						<input type="number" name="telp" id="telp" class="form-control" required>
+					</div>
+				</div>
+			</div>
+
+			<!-- Input text grid -->
+			<div class="form-group">
+				<div class="row">
+					<div class="col">
+						<label>Tanggal Ambil</label>
+		  <input type="text" class="form-control" name="ambil" id="ambil" placeholder="Tanggal" onfocus="(this.type = 'date')" required>
+						<!-- <select class="form-select" name="ambil" id="ambil" required>
+							<option selected disabled hidden style='display: none' value=''></option>
+							<option value="Laki-Laki">Laki-Laki</option>
+							<option value="Perempuan">Perempuan</option>
+						</select> -->
+					</div>
+					<div class="col">
+						<label>Tanggal Kembali</label>
+						<input type="text" class="form-control" name="kembali" id="kembali" placeholder="Tanggal" onfocus="(this.type = 'date')" required>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Input text grid -->
+			<div class="form-group">
+				<div class="row">
+					<div class="col">
+						<label>Kendaraan</label>
+						<select class="form-select" name="kendaraan" id="kendaraan" required>
+							<option selected disabled hidden style='display: none' value=''></option>
+						</select>
+					</div>
+
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+</div>

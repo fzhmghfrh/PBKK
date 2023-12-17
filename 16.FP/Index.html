@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<base target="_top">
+	<!-- See JavaScript.html file -->
+	<?!= include('JavaScript'); ?>
+	<!-- See stylecss.html file -->
+	<?!= include('Stylecss'); ?>
+</head>
+
+<body>
+	<div class="container-dark py-2">
+		<div class="row g-2 justify-content-start">
+			<div class="col">
+			  <img src="https://drive.google.com/uc?export=view&id=1a4a2x9hFHk6kE_M8X8lEp-KlpsqRtzsC" class="rounded float-left" style="width:30px;height:30px; margin-left: 1em;" alt="...">
+				<h4 class="d-inline-block align-middle" style="color: white; margin-left: 0.5em; margin-top: 10px"><strong>HAPPY RENTALS</strong></h4>
+				<button type="button" class="btn btn-success" style="float:right; margin-right: 1em; margin-top: 5px;" data-bs-toggle="collapse" data-bs-target="#menu"><i class="fa-solid fa-bars fa-lg"></i></button>
+
+				<button class="btn btn-primary" type="button" style="width:90px; float:right; margin-right: 0.5em; margin-top: 5px;" id="tambah" data-bs-toggle='modal' data-bs-target="#myModal"><i class="fa-solid fa-plus"></i> Input</button>
+
+				<a type="button" href="<?= myURL(); ?>" class="btn btn-secondary" style="float:right; margin-right: 0.5em; margin-top: 5px;"><i class="fa-solid fa-right-from-bracket"></i></a>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<!-- The Modal Form -->
+		<div class="modal" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false">
+			<div class="modal-dialog modal-lg modal-dialog-scrollable">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h5>Form Input-Edit</h5>
+						<button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" onclick="clearForm();"></button>
+					</div>
+					<!-- Modal body -->
+					<div class="modal-body">
+						<!-- See Form.html file -->
+						<?!= include('Form'); ?>
+					</div>
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary btn-sm" form="myForm">Submit</button>
+						<button type="reset" class="btn btn-secondary btn-sm" value="Reset" form="myForm">Reset</button>
+						<button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- DataTable  -->
+	<div class="container-fluid">
+		<?!= include('DataTable'); ?> <!-- See DataTable.html File -->
+	</div>
+	<?!= include('SpinnerModal'); ?>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

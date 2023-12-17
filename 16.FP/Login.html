@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <base target="_top">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   </head>
+   <style>
+      body {
+      background-color: #F8FFD2;
+      margin: 0;
+      }
+      a {
+      text-decoration: none;
+      }
+      .login-page {
+      width: 100%;
+      height: 100vh;
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+      h3.mb-3 {
+        color: #643606;
+      }
+      .form-right {
+        background-color: #D0F288;
+        color: white; /* Set the text color for better contrast */
+        text-align: center;
+        /* padding-top: 5rem; Adjust the padding as needed */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .form-right img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%; /* Optional: Add border-radius for a circular image */
+        object-fit: cover; /* Ensure the image covers the entire container */
+      }
+      .form-right i {
+      font-size: 100px;
+      }
+   </style>
+   <body>
+      <?var url = myURL();?>
+      <div class="login-page bg-transparent">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-10 offset-lg-1">
+                  <h3 class="mb-3">Login App Script</h3>
+                  <div class="bg-white shadow rounded">
+                     <div class="row">
+                        <div class="col-md-7 pe-0">
+                           <div class="form-left h-100 py-5 px-5">
+                              <form method="post" action="<?= url ?>" class="row g-4">
+                                 <div class="col-12">
+                                    <label>Username<span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                       <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                       <input type="text" id="username" class="form-control" name="username" placeholder="Username">
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <label>Password<span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                       <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                       <input type="password" class="form-control" name="password" placeholder="Password">
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <button type="submit" value="Login" name="LoginButton" class="btn btn-success px-4 float-end mt-4">login</button>
+                                    <!-- <p class="text-secondary mt-3 text-secondary" style="float:left;">Username: user1 / user2<br/>Password: user1 / user2</p> -->
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                        <div class="col-md-5 ps-0 d-none d-md-block">
+                           <div class="form-right h-100 text-white text-center">
+                              <img src="https://drive.google.com/uc?export=view&id=1a4a2x9hFHk6kE_M8X8lEp-KlpsqRtzsC" class="rounded" alt="...">
+                              <!-- <h2 class="fs-1">Welcome Back!!!</h2> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <p class="text-end text-secondary mt-3 text-warning"><?= message ?></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Bootstrap JS -->
+      <span><?= message ?></span>     
+   </body>
+</html>
